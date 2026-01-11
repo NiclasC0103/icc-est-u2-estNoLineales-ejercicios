@@ -57,85 +57,49 @@ src/
 
 ## Descripción de Ejercicios
 
-### Ejercicio 01: Insertar en un Árbol Binario de Búsqueda (BST)
+Aquí explico de forma sencilla qué problema resuelve cada parte del código:
 
-Carpeta: `Ejercicio_01_insert`
-Implementa un algoritmo para insertar nodos en un Árbol Binario de Búsqueda.
+1. Insertar en un Árbol (BST)
+Carpeta: Ejercicio_01_insert
 
- **Input de ejemplo:** `[5, 3, 7, 2, 4, 6, 8]`
- **Output esperado:**
+Este algoritmo construye el árbol colocando cada número en su lugar correcto:
 
-```
-    5
-  3   7
- 2 4 6 8
-```
+Si el número es menor que el actual, lo manda a la izquierda.
 
----
+Si el número es mayor, lo manda a la derecha.
 
-### Ejercicio 02: Invertir un Árbol Binario
+Esto crea un árbol ordenado donde es fácil buscar información.
 
-📂 Carpeta: `Ejercicio_02_invert`
-Dada la raíz de un árbol binario, el algoritmo devuelve su versión invertida (espejo).
+2. Invertir el Árbol (Espejo)
+Carpeta: Ejercicio_02_invert
 
- **Input de ejemplo:**
+Este código toma el árbol y le da la vuelta, como si lo pusieras frente a un espejo.
 
-```
-    4
-  2   7
-1  3 6  9
-```
+Lo que estaba a la izquierda pasa a la derecha.
 
-**Output esperado:**
+Lo que estaba a la derecha pasa a la izquierda.
 
-```
-    4
-  7   2
-9  6 3  1
-```
+Esto se repite para todos los nodos, desde la raíz hasta el final.
 
----
+3. Listar por Niveles
+Carpeta: Ejercicio_03_listLeves
 
-### Ejercicio 03: Listar Niveles en Listas Enlazadas
+En lugar de recorrer el árbol bajando por las ramas, este ejercicio lo lee por "pisos" o niveles:
 
-📂 Carpeta: `Ejercicio_03_listLeves`
-Devuelve una lista enlazada con los nodos por nivel. Si hay N niveles, se obtienen N listas.
+Primero toma la raíz (Nivel 0).
 
- **Input de ejemplo:**
+Luego sus hijos directos (Nivel 1).
 
-```
-    4
-  2   7
-1  3 6  9
-```
+Luego los nietos (Nivel 2), y así sucesivamente.
 
-**Output esperado:**
+El resultado es una lista organizada por filas.
 
-```
-4  
-2 → 7  
-1 → 3 → 6 → 9
-```
+4. Calcular la Profundidad
+Carpeta: Ejercicio_04_depth
 
----
+Este método mide qué tan alto es el árbol. Simplemente cuenta cuál es el camino más largo desde la raíz hasta la hoja más lejana.
 
-### Ejercicio 04: Calcular la Profundidad Máxima
-
-Carpeta: `Ejercicio_04_depth`
-Calcula la profundidad máxima de un árbol binario (la longitud del camino más largo desde la raíz hasta una hoja).
-
-**Input de ejemplo:**
-
-```
-    4
-  2   7
-1  3  
-8
-```
-
-**Output esperado:** `4`
-
----
+Ejemplo: Si el camino más largo tiene 4 nodos (4 → 2 → 1 → 8), la profundidad es 4.
 
 ## Indicaciones Generales
 
@@ -184,4 +148,4 @@ Para contribuir a este proyecto, por favor crea un fork y envía una solicitud d
 ## Autores
 
 - [PABLO TORRES] - Desarrollo inicial
-
+- [Nicolás Cornejo] - Implementación de soluciones
